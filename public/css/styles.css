@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    border-radius: 8px;
+}
+.user{
+    background-color: hsl(235, 46%, 20%);
+    width: 100%;
+}
+.activity{
+    position: relative;
+}
+.activity-details{
+    background-color: hsl(235, 46%, 20%);
+    color: white;
+    width: 100%;
+    display: block;
+    position: absolute;
+    bottom: 0px;
+}
+body{
+    background-color: hsl(226, 43%, 10%)
+}
+.main{
+    margin: 0 auto;
+}
+.work{
+    background-color: hsl(15, 100%, 70%);
+}
+.play{
+    background-color: hsl(195, 74%, 62%);}
+.study{
+    background-color: hsl(348, 100%, 68%);}
+.exercise{
+    background-color: hsl(145, 58%, 55%);}
+.social{
+    background-color: hsl(264, 64%, 52%);}
+.self-care{
+    background-color: hsl(43, 84%, 65%);}
+
+@media screen and (max-width: 375px){
+    .main{
+        /* background-color: hsl(246, 80%, 60%); */
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+    .activities {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        gap: 15px;
+    }
+    .user{
+        height: 200px;
+    }
+    .activity{
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        margin: 0px;
+    }
+    .activity-details{
+        height: 100px;
+    }
+
+}
+
+@media screen and (min-width: 376px){
+    .user{
+        height: 400px;
+    }
+}

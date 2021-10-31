@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { createContext, useState } from 'react';
 import './App.css';
+import { Activities } from './components/activities';
+import { User } from './components/user';
+
+export const FrequentlyContext = createContext(null);
 
 function App() {
+  const [frequencies, setFrequencies] = useState({
+    daily: 'selected',
+    weekly: '',
+    monthly: '',
+    selection: 'daily'
+})
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="App">
+        <FrequentlyContext.Provider 
+          value={{
+            frequencies,
+            setFrequencies
+          }}>
+            <User/>
+            <Activities/>
+        </FrequentlyContext.Provider>   
+      </div>
     </div>
   );
 }

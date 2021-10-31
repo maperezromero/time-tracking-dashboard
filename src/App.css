@@ -1,12 +1,8 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@font-face {
+  font-family: myFont;
+  src: url(https://fonts.google.com/specimen/Rubik);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -34,5 +30,255 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  border-radius: 8px;
+  font-family: 'Rubik', sans-serif;
+}
+.user{
+  background-color: hsl(235, 46%, 20%);
+  position: relative;
+}
+.user-data{
+  display: block;
+  background-color: hsl(246, 80%, 60%);
+}
+.activity{
+  position: relative;
+}
+.activity-details{
+  background-color: hsl(235, 46%, 20%);
+  color: white;
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 0px;
+}
+body{
+  background-color: hsl(226, 43%, 10%)
+}
+.App{
+  margin: 0 auto;
+}
+.work{
+  background-color: hsl(15, 100%, 70%);
+}
+.play{
+  background-color: hsl(195, 74%, 62%);}
+.study{
+  background-color: hsl(348, 100%, 68%);}
+.exercise{
+  background-color: hsl(145, 58%, 55%);}
+.social{
+  background-color: hsl(264, 64%, 52%);}
+.selfcare{
+  background-color: hsl(43, 84%, 65%);}
+
+.user-picture{
+  height: 50%;
+  border: aliceblue 3px solid;
+  border-radius: 50%;
+  position: relative;
+}
+
+.normal-text{
+  opacity: 0.6;
+}
+.name-text{
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+
+.selection{
+  display: block;
+  color: rgba(255,255,255,0.6);
+}
+.selected{
+  color: rgba(255,255,255,1);
+}
+
+
+@media screen and (max-width: 767px){
+  .App{
+      display: flex;
+      flex-direction: column;
+      gap:15px;
+  }
+  .activities {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 15px 15px 15px;
+      gap: 15px;
+  }
+  .user{
+      height: 200px;
+      margin: 15px 15px 0px 15px;
+  }
+  .user-picture{
+   left: calc(100% - (100% - 33px));
+  }
+  .user-data{
+    height: 60%;
+    display: flex;
+    align-items: center;
+  }
+  .user-text{
+    padding-left: 10px;
+  }
+  .normal-text, .name-text{
+    display: block;
+    position: relative;
+    left: 30%;
+  }
+  .selection{
+    height: 40%;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+  
+  }
+  .activity{
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      margin: 0px;
+      overflow: hidden;
+  }
+  .act-img{
+    height: 35%;
+    transform: rotate(10deg);
+    position:absolute;
+    top: -5px;
+    right: 15px;
+    
+  }
+  .activity-details{
+      height: 80%;
+      display: flex;
+      justify-content: space-between;
+  }
+  .act-flex1, .act-flex2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  .act-flex2 > *{
+    opacity: 0.6;
+  }
+  .act-name{
+    font-size: 1.3rem;
+  }
+  .act-time{
+    font-size: 2rem;
+  }
+  .act-points{
+    font-size: 2rem;
+    text-align: right;
+    
+  }
+}
+
+@media screen and (min-width: 768px){
+  
+  html, body, #root, #root>div{
+    height: 100%;
+    margin: 0;
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+   .App{
+    display: flex;
+    height: min(50vh, 40vw);
+    aspect-ratio: 2.15;
+    /* background-color: tomato; */
+  }
+  .user{
+      height: 100%;
+      width: 33%;
+  }
+  .daily, .weekly, .monthly{
+    cursor: pointer;
+  }
+  .user-data{
+    height: 68%;
+    position: relative;
+  }
+  .user-picture{
+    height: 24%;
+    
+    position: absolute;
+    left: 11%;
+    top: 8.2%;
+  }
+  .normal-text{
+    font-size:  1vw;
+  }
+  .user-text{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top:44%;
+    left: 11%;
+    color: white;
+  }
+  .name-text, .lastname-text{
+    /* font-size:  3vw; */
+    font-size: min(5vh,3vw);
+  }
+  .selection{
+    display: flex;
+    position: absolute;
+    height: 32%;
+    font-size: min(3vh,1.5vw);
+    flex-direction: column;
+    justify-content: space-around;
+    left: 11%;
+  }
+  .activities{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+    margin: 0 0 0 1vw;
+    /* background-color: yellow; */
+    width: 100%;
+  }
+  .act-flex1, .act-flex2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  .activity{
+    width: 32%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .act-img{
+    position: absolute;
+    right: 7%;
+    height: 35%;
+  }
+  .activity-details{
+    height: 81%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .act-name{
+    font-size: min(3vh,1.5vw);
+  }
+  .act-time{
+    font-size: min(6vh,4vw);
+  }
+  .act-points{
+    height: min(2vh,1vw);;
   }
 }
