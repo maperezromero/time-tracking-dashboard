@@ -39,22 +39,18 @@ export const Activities = () => {
                 <span key={activity.title} className={activity.title.split(' ').join('').toLocaleLowerCase() + " activity"} >
                     <img src={image} alt="test" className="act-img"/>
                     <span className="activity-details">
-                        <span className="act-flex1">
                             <span className="act-name">
                                 {activity.title}
                             </span>
                             <span className="act-time">
                                 {current}
                             </span>
-                        </span>
-                        <span className="act-flex2">
                             <span className="act-points">
                             <img src={ellipsis} alt="ellipsis" className="ellipsis"/>
                             </span>
                             <span className="act-pre-time">
                                 {prev}
                             </span>
-                        </span>
                     </span>
                 </span>
                 )

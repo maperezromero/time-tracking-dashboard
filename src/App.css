@@ -128,10 +128,11 @@ body{
   .user-text{
     padding-left: 10px;
   }
-  .normal-text, .name-text{
+  .normal-text, .name-text, .lastname-text{
     display: block;
     position: relative;
-    left: 30%;
+    left: 40%;
+    color: white;
   }
   .selection{
     height: 40%;
@@ -157,28 +158,44 @@ body{
   }
   .activity-details{
       height: 80%;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      align-content: center;
   }
-  .act-flex1, .act-flex2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 1rem;
-  }
-  .act-flex2 > *{
-    opacity: 0.6;
-  }
+
+
   .act-name{
     font-size: 1.3rem;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: absolute;
+    left: 10%;
+    align-self: center;
   }
   .act-time{
     font-size: 2rem;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    position: absolute;
+    left: 10%;
+    align-self: center;
   }
   .act-points{
     font-size: 2rem;
     text-align: right;
-    
+    grid-column: 2;
+    grid-row: 1;
+    position: absolute;
+    right: 10%;
+  }
+  .act-pre-time{
+    grid-column: 2;
+    grid-row: 2;
+    text-align: right;
+    position: absolute;
+    right: 10%;
+    align-self: center;
   }
 }
 
@@ -213,7 +230,6 @@ body{
   }
   .user-picture{
     height: 24%;
-    
     position: absolute;
     left: 11%;
     top: 8.2%;
@@ -250,12 +266,7 @@ body{
     /* background-color: yellow; */
     width: 100%;
   }
-  .act-flex1, .act-flex2{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 1rem;
-  }
+  
   .activity{
     width: 32%;
     position: relative;
@@ -269,16 +280,42 @@ body{
   }
   .activity-details{
     height: 81%;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+  }
+  .act-name, .act-time, .act-pre-time{
+    align-self: center;
   }
   .act-name{
     font-size: min(3vh,1.5vw);
+    grid-column: 1/2;
+    grid-row: 1/2;
+    position: absolute;
+    left: 10%;
+    top: 50%;
   }
   .act-time{
     font-size: min(6vh,4vw);
+    grid-column: 1/2;
+    grid-row: 2/3;
+    position: absolute;
+    left: 10%;
   }
   .act-points{
     height: min(2vh,1vw);;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    position: absolute;
+    top: 50%;
   }
+  .act-pre-time{
+    grid-row: 3/4;
+    grid-column: 1/2;
+    position: absolute;
+    left: 10%;
+    font-size: 80%;
+    bottom: 50%;
+  }
+  
 }
